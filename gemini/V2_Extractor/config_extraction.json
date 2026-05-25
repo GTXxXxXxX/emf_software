@@ -1,0 +1,522 @@
+{
+  "dealers" : [
+  {
+    "Fournisseur": "3D SÉCURITÉ",
+    "Nom de l’entreprise": "3D SÉCURITÉ INC."
+  },
+  {
+    "Fournisseur": "A-T",
+    "Nom de l’entreprise": "AUDIO-TECHNICA"
+  },
+  {
+    "Fournisseur": "ALFRED",
+    "Nom de l’entreprise": "ALFRED PUBLISHING"
+  },
+  {
+    "Fournisseur": "AMAZON",
+    "Nom de l’entreprise": "AMAZON.CA"
+  },
+  {
+    "Fournisseur": "AMÉLIE",
+    "Nom de l’entreprise": "AMÉLIE MARCHAND"
+  },
+  {
+    "Fournisseur": "APPLE",
+    "Nom de l’entreprise": "APPLE CANADA INC."
+  },
+  {
+    "Fournisseur": "APPLE STORE",
+    "Nom de l’entreprise": "APPLE STORE"
+  },
+  {
+    "Fournisseur": "ARCHAMBAULT",
+    "Nom de l’entreprise": "Archambault Berri (SIE)"
+  },
+  {
+    "Fournisseur": "Audible",
+    "Nom de l’entreprise": ""
+  },
+  {
+    "Fournisseur": "BELL CANADA",
+    "Nom de l’entreprise": "BELL CANADA"
+  },
+  {
+    "Fournisseur": "BMR",
+    "Nom de l’entreprise": "OSTIGUY ET FRERES"
+  },
+  {
+    "Fournisseur": "CANADIAN TIRE",
+    "Nom de l’entreprise": "CANADIAN TIRE"
+  },
+  {
+    "Fournisseur": "Carrefour Familial du Richelieu",
+    "Nom de l’entreprise": "Carrefour Familial du Richelieu"
+  },
+  {
+    "Fournisseur": "CCIVR",
+    "Nom de l’entreprise": "Chambre de commerce Vallée du Richelieu"
+  },
+  {
+    "Fournisseur": "CHAMBLY",
+    "Nom de l’entreprise": "VILLE DE CHAMBLY"
+  },
+  {
+    "Fournisseur": "COAST",
+    "Nom de l’entreprise": "COAST MUSIC"
+  },
+  {
+    "Fournisseur": "COSTCO",
+    "Nom de l’entreprise": "COSTCO"
+  },
+  {
+    "Fournisseur": "COUNTERPOINT",
+    "Nom de l’entreprise": "COUNTERPOINT MUSICAL SERVICES"
+  },
+  {
+    "Fournisseur": "CPC SCP",
+    "Nom de l’entreprise": "CPC SCP"
+  },
+  {
+    "Fournisseur": "CSST",
+    "Nom de l’entreprise": "Commission de santé et de sécurité au travail"
+  },
+  {
+    "Fournisseur": "DADDARIO",
+    "Nom de l’entreprise": "D'ADDARIO CANADA"
+  },
+  {
+    "Fournisseur": "DESJARDINS",
+    "Nom de l’entreprise": "DESJARDINS ASSURANCES GENERALES INC"
+  },
+  {
+    "Fournisseur": "DIST T.B.B",
+    "Nom de l’entreprise": "DISTRIBUTIONS T.B.B"
+  },
+  {
+    "Fournisseur": "DOLLARAMA",
+    "Nom de l’entreprise": "DOLLARAMA"
+  },
+  {
+    "Fournisseur": "DYNACOM",
+    "Nom de l’entreprise": "DYNACOM"
+  },
+  {
+    "Fournisseur": "E-H",
+    "Nom de l’entreprise": "NEW SENSOR CORPORATION (E-H)"
+  },
+  {
+    "Fournisseur": "Ebay",
+    "Nom de l’entreprise": ""
+  },
+  {
+    "Fournisseur": "ERIKSON AUDIO",
+    "Nom de l’entreprise": "ERIKSON AUDIO"
+  },
+  {
+    "Fournisseur": "ERIKSON MUSIC",
+    "Nom de l’entreprise": "ERIKSON MUSIC (JAM INDUSTRIES)"
+  },
+  {
+    "Fournisseur": "ERIKSON PRO",
+    "Nom de l’entreprise": "ERIKSON PRO (JAM INDUSTRIES)"
+  },
+  {
+    "Fournisseur": "EVOLUSIUM",
+    "Nom de l’entreprise": "EVOLUSIUM"
+  },
+  {
+    "Fournisseur": "FACEBOOK",
+    "Nom de l’entreprise": "FACEBOOK ADS"
+  },
+  {
+    "Fournisseur": "FEDERAL EXPRESS",
+    "Nom de l’entreprise": "FEDERAL EXPRESS CANADA LTD."
+  },
+  {
+    "Fournisseur": "FEDEX",
+    "Nom de l’entreprise": "FEDEX EXPRESS"
+  },
+  {
+    "Fournisseur": "FEDEX FREI",
+    "Nom de l’entreprise": "FEDEX FREIGHT"
+  },
+  {
+    "Fournisseur": "FISHMAN",
+    "Nom de l’entreprise": "FISHMAN TRANSDUCERS INC"
+  },
+  {
+    "Fournisseur": "FLEXOPLUS",
+    "Nom de l’entreprise": "IMPRESSIONS FLEXOPLUS"
+  },
+  {
+    "Fournisseur": "GMMQ",
+    "Nom de l’entreprise": "Guilde des musicien(nes) du Quebec"
+  },
+  {
+    "Fournisseur": "GODIN",
+    "Nom de l’entreprise": "Guitares Godin (Guitabec inc)"
+  },
+  {
+    "Fournisseur": "Google",
+    "Nom de l’entreprise": ""
+  },
+  {
+    "Fournisseur": "GOOGLE ADS",
+    "Nom de l’entreprise": "Google Ads"
+  },
+  {
+    "Fournisseur": "GUYKER",
+    "Nom de l’entreprise": "GUYKER"
+  },
+  {
+    "Fournisseur": "HAL LEONARD",
+    "Nom de l’entreprise": "HAL LEONARD"
+  },
+  {
+    "Fournisseur": "Hello",
+    "Nom de l’entreprise": "Espace Hello"
+  },
+  {
+    "Fournisseur": "HOSHINO",
+    "Nom de l’entreprise": "HOSHINO USA"
+  },
+  {
+    "Fournisseur": "HPC",
+    "Nom de l’entreprise": "Harman Pro Canada (Jam)"
+  },
+  {
+    "Fournisseur": "HYDRO",
+    "Nom de l’entreprise": "HYDRO-QUÉBEC"
+  },
+  {
+    "Fournisseur": "IGA",
+    "Nom de l’entreprise": ""
+  },
+  {
+    "Fournisseur": "IKEA",
+    "Nom de l’entreprise": "IKEA BOUCHERVILLE"
+  },
+  {
+    "Fournisseur": "JAM INDUSTRIES",
+    "Nom de l’entreprise": "JAM INDUSTRIES"
+  },
+  {
+    "Fournisseur": "jazzfleurs",
+    "Nom de l’entreprise": "JAZZFLEURS INC."
+  },
+  {
+    "Fournisseur": "JEAN COUTU",
+    "Nom de l’entreprise": "JEAN COUTU"
+  },
+  {
+    "Fournisseur": "KANA",
+    "Nom de l’entreprise": "KANA MUSIC CANADA"
+  },
+  {
+    "Fournisseur": "KGE",
+    "Nom de l’entreprise": "KGE ELECTRONIQUE"
+  },
+  {
+    "Fournisseur": "La Taniere",
+    "Nom de l’entreprise": "La Taniere Inc."
+  },
+  {
+    "Fournisseur": "LAVAGE DE VITRES JACKS INC.",
+    "Nom de l’entreprise": "LAVAGE DE VITRES JACKS INC."
+  },
+  {
+    "Fournisseur": "LE MAITRE",
+    "Nom de l’entreprise": "LE MAITRE DU DÉBOUCHAGE"
+  },
+  {
+    "Fournisseur": "LEVYS",
+    "Nom de l’entreprise": "LEVY'S LEATHERS LIMITED"
+  },
+  {
+    "Fournisseur": "Lutherie Éric Proulx",
+    "Nom de l’entreprise": "Lutherie Éric Proulx"
+  },
+  {
+    "Fournisseur": "machool technologies",
+    "Nom de l’entreprise": "machool technologies"
+  },
+  {
+    "Fournisseur": "MARTIN",
+    "Nom de l’entreprise": "MARTIN & CO."
+  },
+  {
+    "Fournisseur": "MARTIN&CO",
+    "Nom de l’entreprise": "MARTIN&CO"
+  },
+  {
+    "Fournisseur": "Morand & Carayon Inc.",
+    "Nom de l’entreprise": "Morand & Carayon Inc."
+  },
+  {
+    "Fournisseur": "MUSIC STORE",
+    "Nom de l’entreprise": "MUSIC STORE"
+  },
+  {
+    "Fournisseur": "Métro",
+    "Nom de l’entreprise": "Métro"
+  },
+  {
+    "Fournisseur": "NADINE PAR",
+    "Nom de l’entreprise": "NADINE PARADIS CPA INC."
+  },
+  {
+    "Fournisseur": "NEXTGEN",
+    "Nom de l’entreprise": "Next Gen Musical LTD"
+  },
+  {
+    "Fournisseur": "Notaire",
+    "Nom de l’entreprise": "Étude notariale Benoit Rivet Inc."
+  },
+  {
+    "Fournisseur": "Paiements QuickBooks",
+    "Nom de l’entreprise": ""
+  },
+  {
+    "Fournisseur": "PARCELZ",
+    "Nom de l’entreprise": "PARCELZ"
+  },
+  {
+    "Fournisseur": "PATRIC",
+    "Nom de l’entreprise": "Patric St-Onge CPA Inc."
+  },
+  {
+    "Fournisseur": "PLOMBERIE ST-LUC",
+    "Nom de l’entreprise": "PLOMBERIE ST-LUC"
+  },
+  {
+    "Fournisseur": "POSTES CAN",
+    "Nom de l’entreprise": "POSTES CANADA"
+  },
+  {
+    "Fournisseur": "PRO PIERRE",
+    "Nom de l’entreprise": "PRO PIERRE LAVEUR DE VITRES"
+  },
+  {
+    "Fournisseur": "PUROLATOR",
+    "Nom de l’entreprise": "PUROLATOR INC."
+  },
+  {
+    "Fournisseur": "PYN*GUYKER",
+    "Nom de l’entreprise": "PYN*GUYKER"
+  },
+  {
+    "Fournisseur": "QUO",
+    "Nom de l’entreprise": "QUO"
+  },
+  {
+    "Fournisseur": "RADIAL ENGINEERING LTD.",
+    "Nom de l’entreprise": "RADIAL ENGINEERING LTD."
+  },
+  {
+    "Fournisseur": "RBC",
+    "Nom de l’entreprise": "ROYAL BANK OF CANADA"
+  },
+  {
+    "Fournisseur": "Receiver General",
+    "Nom de l’entreprise": ""
+  },
+  {
+    "Fournisseur": "RECEVEUR",
+    "Nom de l’entreprise": "Receveur général du Canada"
+  },
+  {
+    "Fournisseur": "REGISTRAIR",
+    "Nom de l’entreprise": "Registraire des entreprises du Quebec"
+  },
+  {
+    "Fournisseur": "RESTAURANT",
+    "Nom de l’entreprise": "RESTAURANT"
+  },
+  {
+    "Fournisseur": "REVENU QC",
+    "Nom de l’entreprise": "Ministère du Revenu du Québec"
+  },
+  {
+    "Fournisseur": "Revenu Québec",
+    "Nom de l’entreprise": ""
+  },
+  {
+    "Fournisseur": "ROLAND",
+    "Nom de l’entreprise": "ROLAND CANADA LTD."
+  },
+  {
+    "Fournisseur": "SABIAN",
+    "Nom de l’entreprise": "SABIAN LTD."
+  },
+  {
+    "Fournisseur": "SAQ",
+    "Nom de l’entreprise": "SAQ CHAMBLY"
+  },
+  {
+    "Fournisseur": "SENNHEISER",
+    "Nom de l’entreprise": "SENNHEISER"
+  },
+  {
+    "Fournisseur": "Serrutech",
+    "Nom de l’entreprise": "La Serrutech"
+  },
+  {
+    "Fournisseur": "SFM",
+    "Nom de l’entreprise": "SF Marketing Inc."
+  },
+  {
+    "Fournisseur": "shopper",
+    "Nom de l’entreprise": "Shopper +"
+  },
+  {
+    "Fournisseur": "SIMONS",
+    "Nom de l’entreprise": "SIMONS"
+  },
+  {
+    "Fournisseur": "SMR",
+    "Nom de l’entreprise": "DÉNEIGEMENT SMR"
+  },
+  {
+    "Fournisseur": "SSENS",
+    "Nom de l’entreprise": "SSENS"
+  },
+  {
+    "Fournisseur": "STEVE'S MUSIC",
+    "Nom de l’entreprise": "STEVE'S MUSIC"
+  },
+  {
+    "Fournisseur": "STEWMAC",
+    "Nom de l’entreprise": "STEWART-MACDONALD"
+  },
+  {
+    "Fournisseur": "STONE & GOLD",
+    "Nom de l’entreprise": "STONE & GOLD"
+  },
+  {
+    "Fournisseur": "SYNTAUR",
+    "Nom de l’entreprise": "SYNTAUR"
+  },
+  {
+    "Fournisseur": "TANK DRUM",
+    "Nom de l’entreprise": "TANK DRUM EARTH"
+  },
+  {
+    "Fournisseur": "TELUS",
+    "Nom de l’entreprise": "TELUS MOBILITÉ"
+  },
+  {
+    "Fournisseur": "THERMOTECH",
+    "Nom de l’entreprise": "THERMOTECH SOLUTION"
+  },
+  {
+    "Fournisseur": "THOMANN",
+    "Nom de l’entreprise": "THOMANN GmbH"
+  },
+  {
+    "Fournisseur": "Tibeuf Inc",
+    "Nom de l’entreprise": "Entreprise Tibeuf Inc."
+  },
+  {
+    "Fournisseur": "Tim Horton's",
+    "Nom de l’entreprise": ""
+  },
+  {
+    "Fournisseur": "Timpano Percussion",
+    "Nom de l’entreprise": "Timpano Percussion"
+  },
+  {
+    "Fournisseur": "Tubestore",
+    "Nom de l’entreprise": "The tube store"
+  },
+  {
+    "Fournisseur": "UPS",
+    "Nom de l’entreprise": "UPS CANADA"
+  },
+  {
+    "Fournisseur": "USD",
+    "Nom de l’entreprise": "USD"
+  },
+  {
+    "Fournisseur": "VIA VOCE",
+    "Nom de l’entreprise": "Ensemble vocal Via Voce"
+  },
+  {
+    "Fournisseur": "VIDEOTRON",
+    "Nom de l’entreprise": "VIDEOTRON"
+  },
+  {
+    "Fournisseur": "VIRIDI",
+    "Nom de l’entreprise": "VIRIDI CAFÉ"
+  },
+  {
+    "Fournisseur": "Vitrerie",
+    "Nom de l’entreprise": "Vitrerie Optimum Inc."
+  },
+  {
+    "Fournisseur": "WALMART",
+    "Nom de l’entreprise": "WALMART CANADA"
+  },
+  {
+    "Fournisseur": "WHC",
+    "Nom de l’entreprise": "WEB HOSTING CANADA"
+  },
+  {
+    "Fournisseur": "YAMAHA",
+    "Nom de l’entreprise": "YAMAHA CANADA"
+  },
+  {
+    "Fournisseur": "YORKVILLE",
+    "Nom de l’entreprise": "YORKVILLE SOUND"
+  },
+  {
+    "Fournisseur": "Zenpoolzone",
+    "Nom de l’entreprise": "Zenpoolzone"
+  }
+],
+  "categories" : [
+    "ACCESSOIRES DRUM", "ACCESSOIRES GUITARE", "ACCESSOIRES PIANO", "AMPLI",
+    "ANCHES", "AUTRE", "BAGUETTES", "BANJO", "BASSE", "CABLE", "CAPO",
+    "CERTIFICAT-CADEAU", "CLAVIER", "CONSOLE", "CORDES", "COURROIE",
+    "COURS", "CYMBALE", "DIVERS", "DON", "DRUM", "EFFETS", "ESCOMPTE",
+    "ETUI", "GUITARE ACOUSTIQUE", "GUITARE CLASSIQUE", "GUITARE ELECTRIQUE",
+    "HARMONICA", "LOCATION", "LUTRIN", "METRONOME", "MICRO", "P-A",
+    "PARTITIONS", "PEAU", "PERCUSSION", "PIANO", "PICK", "PROMOTION",
+    "RACK À HARMONICA", "RECORDING", "REPARATION", "SLIDE", "SONORISATION",
+    "SPECTACLE", "STAND", "TABLE TOURNANTE", "TUBE", "TUNER", "UKULELE",
+    "VENT", "VIOLON"
+],
+  "json_schema" : {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExtractionFactureMusique",
+  "type": "object",
+  "properties": {
+    "dealer": { "type": "string" },
+    "invoice_date": { "type": "string", "pattern": "^[0-9]{2}/[0-9]{2}/[0-9]{4}$" },
+    "invoice_number": { "type": "string" },
+    "freight": { "type": "number" },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": { "type": "string" },
+          "quantity": { "type": "integer" },
+          "description": { "type": "string" },
+          "category": { "type": "string" },
+          "unit_price": { "type": "number" },
+          "extended_price": { "type": "number" },
+          "competition": { "type": "string", "format": "uri" },
+          "competition_price": { "type": "number" },
+          "competition_price_confidence": { "type": "string" }
+        },
+        "required": ["product_id", "quantity", "category", "unit_price"]
+      }
+    },
+    "tps": { "type": "number" },
+    "tvq": { "type": "number" },
+    "sub_total": { "type": "number" },
+    "total": { "type": "number" }
+  },
+  "required": ["dealer", "invoice_number", "products", "total"]
+}
+}

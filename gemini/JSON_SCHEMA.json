@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "properties": {
+    "dealer": {
+      "type": "string",
+      "description": "Nom du fournisseur identifié via la colonne 1 du fichier de référence."
+    },
+    "invoice_date": {
+      "type": "string",
+      "pattern": "^[0-9]{2}/[0-9]{2}/[0-9]{4}$",
+      "description": "Date au format JJ/MM/AAAA."
+    },
+    "invoice_number": {
+      "type": "string"
+    },
+    "freight": {
+      "type": "number",
+      "description": "Frais de transport/livraison."
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": { "type": "string" },
+          "quantity": { "type": "integer" },
+          "description": {
+            "type": "string",
+            "description": "Micro-description incluant la marque, le modèle et le type d'objet."
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "ACCESSOIRES DRUM", "ACCESSOIRES GUITARE", "ACCESSOIRES PIANO", "AMPLI",
+              "ANCHES", "AUTRE", "BAGUETTES", "BANJO", "BASSE", "CABLE", "CAPO",
+              "CERTIFICAT-CADEAU", "CLAVIER", "CONSOLE", "CORDES", "COURROIE",
+              "COURS", "CYMBALE", "DIVERS", "DON", "DRUM", "EFFETS", "ESCOMPTE",
+              "ETUI", "GUITARE ACOUSTIQUE", "GUITARE CLASSIQUE", "GUITARE ELECTRIQUE",
+              "HARMONICA", "LOCATION", "LUTRIN", "METRONOME", "MICRO", "P-A",
+              "PARTITIONS", "PEAU", "PERCUSSION", "PIANO", "PICK", "PROMOTION",
+              "RACK À HARMONICA", "RECORDING", "REPARATION", "SLIDE", "SONORISATION",
+              "SPECTACLE", "STAND", "TABLE TOURNANTE", "TUBE", "TUNER", "UKULELE",
+              "VENT", "VIOLON", "PA"
+            ]
+          },
+          "unit_price": { "type": "number" },
+          "extended_price": { "type": "number" },
+          "competition": { "type": "string", "format": "uri" },
+          "competition_price": { "type": "number" },
+          "competition_price_confidence": { "type": "string" }
+        },
+        "required": ["product_id", "quantity", "category", "unit_price"]
+      }
+    },
+    "tps": { "type": "number" },
+    "tvq": { "type": "number" },
+    "sub_total": { "type": "number" },
+    "total": { "type": "number" }
+  },
+  "required": ["dealer", "invoice_number", "products", "total"]
+}
