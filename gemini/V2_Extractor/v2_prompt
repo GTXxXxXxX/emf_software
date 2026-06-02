@@ -5,13 +5,19 @@ DONNÉES D'ENTRÉE : Extrait le fichier pdf.
 
 --- DIRECTIVES D'EXTRACTION ---
 1. INTÉGRITÉ : Extraction ligne par ligne.
-2. FORMAT DATE : JJ/MM/AAAA.
+2. FORMAT DATE : JJ/MM/AAAA. À convertir chez certains fournisseurs (Yorkville : JJ-MOIS-AA -> JJ/MM/AAAA). La facture n'est jamais très vieille
 3. LOGIQUE CATÉGORIE : Raisonnement humain requis. Utiliser la catégorie STRICT de l'objet (exemple violon, résine n'est pas un violon, c'est autre.)
 4. MICRO-DESCRIPTION : Format "[MARQUE] [MODÈLE] [TYPE]" (ex: FENDER STRATOCASTER 1998 Bleu).
 5. PRIX UNITAIRE : Utiliser la valeur 'Net Price' pour 'unit_price' si disponible.
 6. SECTIONS VIDES : Garde les sections du JSON dont tu n'as pas l'information (competition et +) dans le fichier.
-7. FOURNISSEURS : Utiliser la liste de fournisseurs fournie pour associer un fournisseur. Pour jam industries, plusieurs fournisseurs. Prendre le nom spécifique (ex. Coast, erikson music)
-8. NUMÉRO DE FACTURE : Généralement un nombre, parfois avec lettre DANS la chaine de nombres. PAS d'espaces.
+7. FOURNISSEURS : Utiliser la liste de fournisseurs fournie pour associer un fournisseur. Pour jam industries, plusieurs fournisseurs. Prendre le nom spécifique et enlever X[NUMERO]:
+Erikson Audio : X9
+Erikson Music : X1
+Erikson Pro : X6
+Coast : X2
+HPC : X7
+Exertis : X5
+8. NUMÉRO DE FACTURE : Généralement un nombre, parfois avec lettre DANS la chaine de nombres. PAS d'espaces à l'interieur de la chaine.
 9. FOURNISSEUR : Identifier via nom de l'entreprise -> Retourner valeur de CODE
 
 --- RÈGLES SPÉCIFIQUES ---
@@ -20,3 +26,6 @@ DONNÉES D'ENTRÉE : Extrait le fichier pdf.
 - DIVERS : Pour les frais environnementaux (conserver la description originale).
 - HOSHINO : Laisser impérativement tous les montants en USD (ne pas convertir en CAD).
 - ARCHAMBAULT ET AUTRES : Si le code fournis est un code interne, trouve le code soit dans la descriptions produit (généralement en majuscule) ou en ligne.
+
+--- AUTRE ---
+ATTENTION : Si un fichier chargé n'est pas une facture, renvoyer None.

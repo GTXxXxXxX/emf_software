@@ -7,6 +7,8 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from threading import Thread
 from time import sleep
 
+from termcolor import colored
+
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 
 
@@ -36,20 +38,25 @@ class MessageRetriever:
         return creds
 
     def get_messages_with_attachments(self, user_id='me', query='is:unread has:attachment'):
-        global parts
+        global parts, nb_of_files
         results = self.service.users().messages().list(userId=user_id, q=query).execute()
         messages = results.get('messages', [])
         attachments_paths = []
 
         if not messages:
-            print("No new unread messages with attachments.")
+            print(colored("No new unread messages with attachments.","yellow"))
             return
 
         for msg in messages:
             msg_id = msg['id']
             message = self.service.users().messages().get(userId=user_id, id=msg_id, format='full').execute()
+            # 1. On récupère les headers du message
+            headers = message.get('payload', {}).get('headers', [])
 
-            print(f"Treating : {msg_id}...")
+            # 2. On cherche le header qui s'appelle 'Subject'
+            subject = next((header['value'] for header in headers if header['name'].lower() == 'subject'), "Sans objet")
+
+            print(colored(f"Treating : {msg_id}\nObject : {subject} ...", "light_green"))
 
             # Extraction des pièces jointes (Gestion récursive simple)
             parts = [message['payload']]
@@ -60,7 +67,7 @@ class MessageRetriever:
                     parts.extend(part['parts'])
 
                 filename = part.get('filename')
-                if filename:
+                if filename and filename.split('.')[-1] == 'pdf':
                     att_id = part['body'].get('attachmentId')
                     attachment = self.service.users().messages().attachments().get(
                         userId=user_id, messageId=msg_id, id=att_id
@@ -70,7 +77,8 @@ class MessageRetriever:
 
                     with open(f"gmail_api/unprocessed/{filename}", 'wb') as f:
                         f.write(file_data)
-                        attachments_paths.append(f"unprocessed/{filename}")
+                        if f'unprocessed/{filename}' not in attachments_paths:
+                            attachments_paths.append(f"unprocessed/{filename}")
                     print(f" -> Downloaded file : {filename}")
                     nb_of_files += 1
 
@@ -85,13 +93,15 @@ class MessageRetriever:
 
 
 class GmailPoller:
-    def __init__(self):
+    def __init__(self, poll_delay):
         self.messages = MessageRetriever(credentials="credentials.json")
-        self.poll_delay = 300
+        self.poll_delay = poll_delay
 
     def poll(self):
         while True:
+            print("Polling...")
             self.messages.get_messages_with_attachments()
+            print(f"Next poll in {self.poll_delay} seconds...")
             sleep(self.poll_delay)
 
     def start_polling(self):

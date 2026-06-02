@@ -1,6 +1,9 @@
 import pdfplumber
 
 class PDFExtractor:
+    """"
+    A pdf extractor tool
+    """
     def __init__(self):
         pass
 
