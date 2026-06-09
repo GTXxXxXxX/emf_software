@@ -1,5 +1,7 @@
+import datetime
 import json
 
+from db_handler.db_handler import DBHandler
 from gemini.gemini import Gemini
 import os
 from gmail_api import gmail
@@ -19,10 +21,11 @@ class Console:
         self.poller = gmail.GmailPoller(30)
         self.unprocessed_dir = "gmail_api/unprocessed"
         self.processed_dir = "treated_invoices_json"
+        self.db_name = "processed_invoices"
+        self.db_handler = DBHandler(self.db_name)
         self.path_queue = queue.Queue()
         self.event_handler = CustomHandler(self.path_queue)
         self.observer = Observer()
-
 
     def main(self):
         mode = input("1 - Debug\n2 - Main:\n > ")
@@ -67,6 +70,15 @@ class Console:
                                         print("No unprocessed invoice found.")
                                 case 3:
                                     print("Treated invocies : ")
+                                    for index, filename in enumerate(os.listdir(self.processed_dir)):
+                                        print(f"{index} > {filename}")
+                                    try:
+                                        choice = int(input("Scrape invoice number: "))
+                                        json_path = f"{self.processed_dir}/{os.listdir(self.processed_dir)[choice]}"
+                                        response = self.gemini.get_competition_prices(json_path)
+                                        print(response)
+                                    except Exception as e:
+                                        print(f'Error : {e}')
 
                             pause()
                         except Exception as e:
@@ -86,23 +98,40 @@ class Console:
 
                         # Send the invoice to GEMINI
                         print(f"Scraping {file_path}...")
+                        before = time.time()
                         scraped_invoice = self.gemini.normalize_invoice(file_path)
+                        print(scraped_invoice)
+                        execution_time = time.time() - before
 
                         # Transform the invoice into a dict to make the name [dealer][inv_nb]
                         dict_json = json.loads(scraped_invoice)
-                        invoice_name = dict_json["dealer"] + dict_json["invoice_number"]
+                        invoice_name = dict_json["dealer"].replace(" ", "") + dict_json["invoice_number"]
 
                         # Write the JSON file
-                        with open(f"treated_invoices_json/{invoice_name}.json", "w", encoding="utf-8") as f:
-                            json.dump(scraped_invoice, f, indent=4)
-                        print(colored("File written.", "green"))
+                        json_file_path = f"{self.processed_dir}/{invoice_name}.json"
+                        with open(json_file_path, "w", encoding="utf-8") as f:
+                            json.dump(dict_json, f, indent=4)
 
+                        print(colored(f"JSON File {json_file_path} written.", "green"))
 
+                        if os.path.exists(file_path):
+                            os.remove(file_path)
 
+                        print(colored(f"File {file_path} deleted.", "green"))
 
+                        json_priced = self.gemini.get_competition_prices(json_file_path)
+                        priced_json_dict = json.loads(json_priced)
+
+                        with open(json_file_path, "w", encoding="utf-8") as f:
+                            json.dump(priced_json_dict, f, indent=4, ensure_ascii=False)
+                        print(colored(f"Priced JSON File {json_file_path} written.", "green"))
+                        dt_date = datetime.datetime.now().strftime("%Y-%m-%d")
+
+                        self.db_handler.insert_invoice(invoice_name, json_file_path, dt_date, execution_time)
 
         except Exception as e:
             print(f'Error : {e}')
+            self.db_handler.close_connection()
             pause()
 
 
@@ -110,8 +139,6 @@ if __name__ == '__main__':
     signal.signal(signal.SIGINT, signal.SIG_DFL)
     console = Console(credentials="gmail_api/credentials.json")
     console.main()
-
-
 
 # try:
 #     response =self.gemini.normalize_invoice(file_path)

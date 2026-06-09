@@ -44,7 +44,7 @@ class MessageRetriever:
         attachments_paths = []
 
         if not messages:
-            print(colored("No new unread messages with attachments.","yellow"))
+            print(colored("P - No new unread messages with attachments.", "yellow"))
             return
 
         for msg in messages:
@@ -56,7 +56,7 @@ class MessageRetriever:
             # 2. On cherche le header qui s'appelle 'Subject'
             subject = next((header['value'] for header in headers if header['name'].lower() == 'subject'), "Sans objet")
 
-            print(colored(f"Treating : {msg_id}\nObject : {subject} ...", "light_green"))
+            print(colored(f"P - Treating : {msg_id}\nObject : {subject} ...", "light_green"))
 
             # Extraction des pièces jointes (Gestion récursive simple)
             parts = [message['payload']]
@@ -79,7 +79,7 @@ class MessageRetriever:
                         f.write(file_data)
                         if f'unprocessed/{filename}' not in attachments_paths:
                             attachments_paths.append(f"unprocessed/{filename}")
-                    print(f" -> Downloaded file : {filename}")
+                    print(f"P - Downloaded file : {filename}")
                     nb_of_files += 1
 
             # --- IMPORTANT : Marquer comme lu pour ne pas le retraiter ---
@@ -87,7 +87,7 @@ class MessageRetriever:
                 userId=user_id, id=msg_id,
                 body={'removeLabelIds': ['UNREAD']}
             ).execute()
-            print(f"Message {msg_id} mark as read.")
+            print(f"P - Message {msg_id} mark as read.")
 
         return nb_of_files
 
@@ -98,10 +98,11 @@ class GmailPoller:
         self.poll_delay = poll_delay
 
     def poll(self):
+        print(colored(f"P - Poller settings:\nP - Poll delay : {self.poll_delay}", "yellow"))
         while True:
-            print("Polling...")
+            print("P - Polling...")
             self.messages.get_messages_with_attachments()
-            print(f"Next poll in {self.poll_delay} seconds...")
+            print(f"P - Next poll in {self.poll_delay} seconds...")
             sleep(self.poll_delay)
 
     def start_polling(self):
